@@ -55,7 +55,9 @@ cross_section(variable_name='theta_e', case_study_name='case_study_1', save=True
 
 ## Temporal Evolution of Variable at Location
 
+
 ### Example of Usage:
+temporal_evolution_variable(variable_name='rh', periods=102, case_study_name='case_study_1', save=True)
 
 ---
 
