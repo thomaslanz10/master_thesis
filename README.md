@@ -46,6 +46,7 @@ sounding(save_name='case_study_5', title=False, save=True)
 Vertical cross-sections show a vertical slice of the atmosphere along a line with a specified start (start_lat, start_lon) and end point (end_lat, end_lon). The analysis tool is represented by a plotting function (cross_section), which supports the following variables: vertical_velocity, rh, omega, absolute_vorticity, theta_e and reflectivity. The only input parameters left to define are date, time and save, if a saving of the figure is desired (default save=False). Before the cross_section function can be used, the data and save directory need to be adjusted according to the respective setting of the user. After interpolation and removing of white space between terrain height and contour of the variable, the code finally creates a vertical cross-section figure with filled mountain area.
 
 ### Example of Usage:
+cross_section(variable_name='theta_e', case_study_name='case_study_1', save=True)
 
 ---
 
