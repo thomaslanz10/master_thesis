@@ -17,7 +17,7 @@ For the analysis tools data from the Weather Research and Forecasting (WRF) mode
 The following subsections provide information regarding the useage of the codes.
 
 ## Terrain Height Maps
-
+A map of the terrain height is produced by this analysis tool with optional add-ons like subsets, a rectangle of the horizontal map's extent (see next section), initiation location, cross-section path, starting locations of the trajectories, the case study locations, the initiation locations of all thunderstorms and a divergence map with height contours. 
 
 ### Example of Usage:
 terrain_height_map('case_study_2', subset=True, initiation=True, divergence=True, save=True)
