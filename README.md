@@ -50,7 +50,7 @@ cross_section(variable_name='theta_e', case_study_name='case_study_1', save=True
 
 ---
 
-## Temporal Eolution of Variable at Location
+## Temporal Evolution of Variable at Location
 
 ### Example of Usage:
 
