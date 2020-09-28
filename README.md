@@ -6,16 +6,16 @@ Author:
 Thomas M. Lanz | MSc in Climate Sciences | OCCR - University of Bern | thlgwatt@hotmail.com
 
 ## Abstract
-Thunderstorms occur frequently in Switzerland and they can cause severe damage. Although their fre- quent occurrence, the initiation of thunderstorms is still incompletely understood. Here, this master thesis aims to contribute to a better understanding of conditions and processes leading to thunderstorm initiation in Switzerland. Therefore, trajectories were calculated with Lagranto in high resolution WRF model data simulated for May 2018. The research of thunderstorms by calculating trajectories in high resolution model data, is a novel approach and enabled new insights into the formation of the atmospheric layers. Combined with other analysis tools, five case studies were conducted and the basic ingredients for thunderstorm initiation were therein investigated. The assessment of the responsible triggering mecha- nisms revealed a high relevance of the presence of low-level convergence (all case studies), a direct impact of storm outflow boundaries (two case studies) and a strong influence of the orography (three case studies) on the initiation of the respective thunderstorm. The second part of this thesis addressed the impact of the changing climate on the initiation of thunderstorms, which is still an open question. Therefore, the pre-strom environments of all thunderstorms in May 2018 and in end of the century climate conditions were analysed. The comparison between the two climate conditions indicates a higher potential for strong and short-lived convection in end of the century climate conditions.
+Thunderstorms occur frequently in Switzerland and they can cause severe damage. Although their frequent occurrence, the initiation of thunderstorms is still incompletely understood. Here, this master thesis aims to contribute to a better understanding of conditions and processes leading to thunderstorm initiation in Switzerland. Therefore, trajectories were calculated with Lagranto in high resolution WRF model data simulated for May 2018. The research of thunderstorms by calculating trajectories in high resolution model data, is a novel approach and enabled new insights into the formation of the atmospheric layers. Combined with other analysis tools, five case studies were conducted and the basic ingredients for thunderstorm initiation were therein investigated. The assessment of the responsible triggering mecha- nisms revealed a high relevance of the presence of low-level convergence (all case studies), a direct impact of storm outflow boundaries (two case studies) and a strong influence of the orography (three case studies) on the initiation of the respective thunderstorm. The second part of this thesis addressed the impact of the changing climate on the initiation of thunderstorms, which is still an open question. Therefore, the pre-strom environments of all thunderstorms in May 2018 and in end of the century climate conditions were analysed. The comparison between the two climate conditions indicates a higher potential for strong and short-lived convection in end of the century climate conditions.
 
 ## Analysis Tools for Investigating Thunderstorm Initiation Conditions
 
-For reaching the aim of the master thesis (access to PDF via <https://occrdata.unibe.ch/students/theses/msc/300.pdf> or e-mail above), the analysis tools consists of different tools for investigating the conditions and processes of the atmosphere: terrain height maps, horizontal maps, soundings, vertical cross-section, temporal evolution of variable at location, temporal evolution of the pre-storm environment of all thunderstorms in May 2018 and in end of the century climate conditions, maps of trajectories and temporal evolution along trajectories. The figures created with these tools served as basis for the analysis of thunderstorm initiation and the answering of the research question of the master thesis.
+For reaching the aim of the master thesis (access to PDF via <https://occrdata.unibe.ch/students/theses/msc/300.pdf> or e-mail above), the analysis tools consists of different tools for investigating the conditions and processes of the atmosphere: terrain height maps, horizontal maps, soundings, vertical cross-section, temporal evolution of variable at location, maps of trajectories and temporal evolution along trajectories. In the second part of the master thesis, the temporal evolution of the pre-storm environment of all thunderstorms in May 2018 and in end of the century climate conditions was of interest and analysed by multiprocessing the TITAN and WRF data. The figures created with these tools served as basis for the analysis of thunderstorm initiation and the answering of the research question of the master thesis.
 
 The programming was done in IDE Jupyter Notebook (v6.0.3) with the IPython Kernel (v7.13.0) and with package and environment management by Conda. For each of the analysis tools, a notebook document was created. In the following section the workflow of the analysis tools is described.
 
 ## What the Analysis Tools Do and How to Use
-For the analysis tools data from the Weather Research and Forecasting (WRF) model (v4 ARW) (Powers et al., 2017) and from the Lagranto program (Sprenger & Wernli, 2015) is used, which takes input data from the WRF model. The WRF data is in netCDF file format and the Lagranto output data in ASCII file format. 
+For the analysis tools data from the Weather Research and Forecasting (WRF) model (v4 ARW) and from the Lagranto program is used, which takes input data from the WRF model. The WRF data is in netCDF file format and the Lagranto output data in ASCII file format. 
 
 The following subsections provide information regarding the useage of the codes.
 
@@ -54,16 +54,10 @@ cross_section(variable_name='theta_e', case_study_name='case_study_1', save=True
 ---
 
 ## Temporal Evolution of Variable at Location
-
+With this analysis tool the temporal evolution of a variable is calculated in the atmosphere above the initiation location and its surroundings (same locations as trajectory starting locations) over a certain amount of 5 minutes time steps (periods) before the thunderstorm initiation. Supported variuables for plotting procedure are wind_speed, rh, omega, absolue_vorticity and theta_e.
 
 ### Example of Usage:
 temporal_evolution_variable(variable_name='rh', periods=102, case_study_name='case_study_1', save=True)
-
----
-
-## Temporal Evolution of Pre-Storm Environment of All Thunderstorms
-
-### Example of Usage:
 
 ---
 
@@ -81,4 +75,11 @@ This analysis tool creates a figure of the temporal evolution (time since initia
 ### Example of Usage:
 temporal_evolution_trajectories(variable_name='theta_e', case_study_name='case_study_5', start_time='1420', end_time='0600', time_cut=4, trajs_bunch_level='all', title=False, legend=False, save=True)
                             
+---
+
+## Temporal Evolution of Pre-Storm Environment of All Thunderstorms
+
+
+### Example of Usage:
+
 ---
