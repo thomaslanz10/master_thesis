@@ -78,8 +78,6 @@ temporal_evolution_trajectories(variable_name='theta_e', case_study_name='case_s
 ---
 
 ## Temporal Evolution of Pre-Storm Environment of All Thunderstorms
-
-
-### Example of Usage:
+In a first step, a list of all WRF files according to selected data_part is generated and the TITAN data is preprocessed for the multiprocessing afterwards. Therein, the initiations are selected according to some criteria (e.g. minimum duration) and for these remaining initiations backward time steps are calculated. In a second step, a multiprocessing function iterates through all WRF files and extracts at the initiation locations defined by the preprocessed TITAN data the WRF variables if the time of initiation and or the time steps before match with the time of the WRF file (next iteration starts, if no initiations happend at the time of the WRF file). The extracted WRF variables are stored in a list, from which the different variables (e.g. CAPE, CIN, WVMR) are selected and their mean and percentiles are calculated in a next step. This builds the basis for the final plotting step, during which the temporal evolution figures are generated.
 
 ---
